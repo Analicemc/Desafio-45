@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root { /* cria variáveis no css*/
+    --white: #ffffff;
+    --dark-green: #002006;
+    --green: #096419;
+    --red: #C90C0F;
+    --gray: #f8f8f8;
+    --light-gray: #5c5a5a71;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--green);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5%;
+    margin-bottom: 2%;
+    border-bottom: 0.5px solid #095817;
+}
+
+#header-logo{
+    width: 9vw;
+    margin: auto;
+    margin-top: 1%;
+    border-radius: 15px;
+}
+
+h1 span{
+    letter-spacing: 1px;
+}
+
+h1 {
+    color: var(--white);
+    text-align: center;
+}
+
+@keyframes h1{
+    from {color: rgb(0, 231, 58);}
+    to{color: rgb(123, 235, 48);}
+}
+
+h1:hover{
+    display: block;
+    animation-name: h1;
+    animation-duration: 2s;
+    color: rgb(123, 235, 48);
+}
+
+#header-nav{
+    margin: auto;
+    display: flex;
+}
+
+
+#header-nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 10px;
+    font-weight: 200;
+    animation-fill-mode: backwards;
+    font-family: 'Roboto Slab', serif;
+    padding: 2px;
+    transition: transform 0.5s;
+    display: block;
+}
+
+#header-nav a:hover {
+    background-color: var(--white);
+    color: var(--green);
+    border-radius: 3px;
+    transform: scale(1.1);
+}
+
+#main-and-aside{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@keyframes h2{
+    from {color: rgb(18, 206, 65);}
+    to{color: rgb(42, 97, 5);}
+
+}
+
+main h2:hover{
+    display: block;
+    color: rgb(2, 104, 33);
+    animation-name: h2;
+    animation-duration: 2s;
+}
+
+section:target{
+    animation: changeBackgroundColor 0.5s 2;
+}
+
+@keyframes changeBackgroundColor {/* animação para quando clicar no link de navegação interna ir para o local da página onde o conteúdo se encontra */
+    0%, 100% {
+        background-color: var(--gray);
+    }
+    50% {
+        background-color: var(--red);
+    }
+}
+
+main{
+    box-shadow: 0.5px 0.5px 4px 0.5px var(--light-gray);
+    border-radius: 10px;
+    background-color: var(--gray);
+    width: 70vw;
+    padding: 10px 20px;
+    font-family: 'Roboto Slab', serif;
+    text-align: justify;
+}
+
+aside{
+    box-shadow: 0.5px 0.5px 4px 0.5px var(--light-gray);
+    border-radius: 10px;
+    height: fit-content;
+    width: 20vw;
+    min-width: 150px;
+    background-color: var(--gray);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+aside h2{
+    margin-bottom: 0;
+    font-size: 1.3em;
+}
+
+#professores>img{
+    height: 11vw;
+    min-height: 70px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto 5px auto;
+}
+
+#professores #professores-first-img{
+    margin-top: 0;
+}
+
+#professores>div>a{
+    color: var(--red);
+    text-decoration: none;
+    font-size: 3vw;
+}
+
+.professores-contato{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5px;
+}
+
+#professores>dt{
+    text-align: center;
+    margin-bottom: 2%;
+    font-size: 1.3em;
+    font-weight: 200;
+}
+
+#professores>dd{
+    text-align: justify;
+    margin: 0 2% 0 2%;
+    font-size: 0.8em;
+}
+
+footer{
+    background-color: var(--dark-green);
+    color: var(--white);
+    height: 200px;
+    box-sizing: border-box;
+    padding: 2%;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+#contato-devs{
+    margin-bottom: 1%;
+}
+
+#contato-devs a{
+    margin: 0 1% 0 1%;
+    color: var(--white);
+}
+
+footer h2{
+    margin-bottom: 2px;
+    font-size: 1.3em;
+}
+
+footer #redes-instituto{
+    display: flex;
+    gap: 3%;
+    justify-content: center;
+}
+
+footer #redes-instituto a{
+    color: var(--red);
+    text-decoration: none;
+    font-size: 2.5vw; 
+    transition: transform 0.5s;
+}
+
+#redes-instituto a:hover{
+    transform: scale(1.1);
+}
